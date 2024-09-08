@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration>
+	<property resource="application.properties" />
+	<property name="LOG_PATH" value="${logging.path}"/>
+	<!--Daily rolling file appender -->
+	<appender name="SUIVI_DPPI_GC"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<FileNamePattern>
+			${LOG_PATH}dppi-gc-log.%d{yyyy-MM-dd}.log
+			</FileNamePattern>
+		</rollingPolicy>
+
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<Pattern>
+				%d [%t] %-5level %X{username} %X{ipAddress} %logger{36} -
+				%m%n
+			</Pattern>
+		</layout>
+	</appender>
+
+	<appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<pattern>%d [%t] %-5level %X{username} %X{ipAddress} %logger{36} - %m%n</pattern>
+		</layout>
+	</appender>
+
+	<root>
+		<level value="INFO" />
+		<appender-ref ref="SUIVI_DPPI_GC" />
+		<appender-ref ref="CONSOLE" />
+	</root>
+
+	<logger name="org.hibernate" additivity="false">
+		<level value="INFO" />
+		<appender-ref ref="SUIVI_DPPI_GC" />
+		<appender-ref ref="CONSOLE" />
+	</logger>
+
+	<logger name="org.apache.commons.digester" additivity="false">
+		<level value="INFO" />
+		<appender-ref ref="SUIVI_DPPI_GC" />
+		<appender-ref ref="CONSOLE" />
+	</logger>
+</configuration>

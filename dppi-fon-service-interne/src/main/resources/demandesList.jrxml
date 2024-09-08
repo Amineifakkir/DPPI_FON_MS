@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Liste des demandes" pageWidth="2548" pageHeight="792" whenNoDataType="AllSectionsNoDetail" columnWidth="2548" leftMargin="0" rightMargin="0" topMargin="20" bottomMargin="20" uuid="7aedab9f-6817-4613-81a2-fed63ae0181f">
+	<property name="ireport.zoom" value="1.3310000000000004"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<field name="liaisonDto.dr" class="java.lang.String"/>
+	<field name="liaisonDto.dc" class="java.lang.String"/>
+	<field name="liaisonDto.commune" class="java.lang.String"/>
+	<field name="liaisonDto.reference" class="java.lang.String"/>
+	<field name="liaisonDto.codeChambreErpt" class="java.lang.String"/>
+	<field name="liaisonDto.etatLiaisonLabel" class="java.lang.String"/>
+	<field name="liaisonDto.operateurLabel" class="java.lang.String"/>
+	<field name="liaisonDto.gpsN1" class="java.lang.Double"/>
+	<field name="liaisonDto.gpsW1" class="java.lang.Double"/>
+	<field name="liaisonDto.gpsN2" class="java.lang.Double"/>
+	<field name="liaisonDto.gpsW2" class="java.lang.Double"/>
+	<field name="liaisonDto.distanceDisponible" class="java.lang.String"/>
+	<field name="liaisonDto.distanceSature" class="java.lang.String"/>
+	<field name="typeDemandeLabel" class="java.lang.String"/>
+	<field name="dateDemande" class="java.lang.String"/>
+	<field name="etatDemandeLabel" class="java.lang.String"/>
+	<field name="loginDemandeur" class="java.lang.String"/>
+	<field name="commentaire" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="21" splitType="Stretch">
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="328" y="1" width="120" height="20" forecolor="#000000" backcolor="#CCCCCC" uuid="55107afa-231f-4abe-ad96-865090dd1312"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.5" lineColor="#FFFFFF"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0" lineColor="#FFFFFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DR]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="568" y="1" width="140" height="20" forecolor="#000000" backcolor="#CCCCCC" uuid="e4cb4b78-e078-4566-aa38-6089b5af252f"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.5" lineColor="#FFFFFF"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0" lineColor="#FFFFFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Commune]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="858" y="1" width="190" height="20" forecolor="#000000" backcolor="#CCCCCC" uuid="c7ed738c-6cf3-4112-9a92-fbca2949c1f0"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.5" lineColor="#FFFFFF"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0" lineColor="#FFFFFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Opérateur]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="1048" y="1" width="120" height="20" forecolor="#000000" backcolor="#CCCCCC" uuid="1f7b8c30-fe86-4a3e-826a-7f7b13a21eb1"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.5" lineColor="#FFFFFF"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0" lineColor="#FFFFFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[GPS_N_1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="1408" y="1" width="120" height="20" forecolor="#000000" backcolor="#CCCCCC" uuid="6d5e3c1c-8a10-4c43-99df-a1da73d71757"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.5" lineColor="#FFFFFF"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.5" lineColor="#FFFFFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[GPS_W_2]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="1168" y="1" width="120" height="20" forecolor="#000000" backcolor="#CCCCCC" uuid="42bfb846-bd81-4526-b0bc-80c67e72cfd8"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.5" lineColor="#FFFFFF"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0" lineColor="#FFFFFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[GPS_W_1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="1288" y="1" width="120" height="20" forecolor="#000000" backcolor="#CCCCCC" uuid="2045a754-7bcf-474c-9279-79ffa5d54f72"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.5" lineColor="#FFFFFF"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.5" lineColor="#FFFFFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[GPS_N_2]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="1698" y="1" width="120" height="20" forecolor="#000000" backcolor="#CCCCCC" uuid="397aa4e3-d542-4dbf-bdf7-fb64af594e73"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.5" lineColor="#FFFFFF"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.5" lineColor="#FFFFFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date Demande]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="1528" y="1" width="170" height="20" forecolor="#000000" backcolor="#CCCCCC" uuid="6c5eb9a9-ccdd-4d80-a14d-da8b6a341ba1"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.5" lineColor="#FFFFFF"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.5" lineColor="#FFFFFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Type Demande]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="0" y="1" width="200" height="20" forecolor="#000000" backcolor="#CCCCCC" uuid="4f252e8a-eaf3-4daf-9ec5-865d3ddb95e9"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.5" lineColor="#FFFFFF"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0" lineColor="#FFFFFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Référence]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="200" y="1" width="128" height="20" forecolor="#000000" backcolor="#CCCCCC" uuid="b3c4008d-4a22-4f75-8713-9328754240fc"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.5" lineColor="#FFFFFF"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.5" lineColor="#FFFFFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Code Chambre ERPT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="448" y="1" width="120" height="20" forecolor="#000000" backcolor="#CCCCCC" uuid="9da11ecf-0d52-49da-9921-9446c5893d92"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.5" lineColor="#FFFFFF"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0" lineColor="#FFFFFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DC]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="708" y="1" width="150" height="20" forecolor="#000000" backcolor="#CCCCCC" uuid="0624c1dd-82dd-486c-8350-9e63b5c69bc8"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.5" lineColor="#FFFFFF"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0" lineColor="#FFFFFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Etat liaison]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="1818" y="1" width="170" height="20" forecolor="#000000" backcolor="#CCCCCC" uuid="66eba701-435b-452d-bffe-9d088ac6b329"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.5" lineColor="#FFFFFF"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.5" lineColor="#FFFFFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Etat Demande]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="1988" y="1" width="130" height="20" forecolor="#000000" backcolor="#CCCCCC" uuid="30d7a26e-a752-47ab-9c16-0ec18c2875e2"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.5" lineColor="#FFFFFF"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.5" lineColor="#FFFFFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Demandeur]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="2118" y="1" width="170" height="20" forecolor="#000000" backcolor="#CCCCCC" uuid="d7dd1047-facf-4144-9f35-b7eb061f8e08"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.5" lineColor="#FFFFFF"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.5" lineColor="#FFFFFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Commentaire]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="2288" y="1" width="130" height="20" forecolor="#000000" backcolor="#CCCCCC" uuid="c5aa3375-1862-4b46-b1c6-7019e12883c6"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.5" lineColor="#FFFFFF"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.5" lineColor="#FFFFFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Distance Disponible]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="2418" y="1" width="130" height="20" forecolor="#000000" backcolor="#CCCCCC" uuid="8614e4d6-61b8-4813-b0ff-9664c931af15"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.5" lineColor="#FFFFFF"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.5" lineColor="#FFFFFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Distance Saturée]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Prevent"/>
+	</pageHeader>
+	<detail>
+		<band height="21" splitType="Prevent">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToBandHeight" x="448" y="1" width="120" height="20" uuid="141cedb3-a04f-45b3-b870-fff21175f0e4"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{liaisonDto.dc}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToBandHeight" x="568" y="1" width="140" height="20" uuid="2a675ed5-7f94-42ef-8b5d-804711bd9d22"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{liaisonDto.commune}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToBandHeight" x="858" y="1" width="190" height="20" uuid="65a99817-a608-444b-b9d5-c9bf7b99bfd2"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{liaisonDto.operateurLabel}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToBandHeight" x="1048" y="1" width="120" height="20" uuid="e148053d-d903-4937-9661-82bb6c5e9577"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{liaisonDto.gpsN1}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToBandHeight" x="1168" y="1" width="120" height="20" uuid="b75431c4-8334-451e-a9ba-4bb289451689"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{liaisonDto.gpsW1}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToBandHeight" x="1288" y="1" width="120" height="20" uuid="9c270b0d-6376-41b1-80ff-afab9f410611"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{liaisonDto.gpsN2}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToBandHeight" x="1408" y="1" width="120" height="20" uuid="f81d6793-4c1e-4b83-a469-59eace9b3b0a"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{liaisonDto.gpsW2}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToBandHeight" x="1698" y="1" width="120" height="20" uuid="4fb0a49e-adfa-47ee-bfbf-804d199f2221"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{dateDemande}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToBandHeight" x="1528" y="1" width="170" height="20" uuid="619c128a-6ea1-4283-bf18-63ce08b4fc3a"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{typeDemandeLabel}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToBandHeight" x="0" y="1" width="200" height="20" uuid="79504b54-ce46-4230-8166-f4dc135d02f2"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{liaisonDto.reference}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToBandHeight" x="328" y="1" width="120" height="20" uuid="42d9abeb-1666-4dc8-b4db-353c93af4e72"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{liaisonDto.dr}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToBandHeight" x="200" y="1" width="128" height="20" uuid="e2ac0f50-1a03-4173-8e06-f880c1425fc6"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{liaisonDto.codeChambreErpt}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToBandHeight" x="708" y="1" width="150" height="20" uuid="1d4fbf7e-1e49-4501-8f74-42ceff85662c"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{liaisonDto.etatLiaisonLabel}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToBandHeight" x="1818" y="1" width="170" height="20" uuid="237fc137-271f-4086-85bd-1ac9d33b3b8f"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{etatDemandeLabel}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToBandHeight" x="1988" y="1" width="130" height="20" uuid="8aab3d80-af8b-4e7a-b40f-bec498e27d59"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{loginDemandeur}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToBandHeight" x="2118" y="1" width="170" height="20" uuid="4e40ab07-536f-46d2-a29c-8d6e408bc0ea"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{commentaire}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToBandHeight" x="2288" y="1" width="130" height="20" uuid="3340d4ea-f25c-45e5-bd25-a0cc4fdc3323"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{liaisonDto.distanceDisponible}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToBandHeight" x="2418" y="1" width="130" height="20" uuid="ec5955fb-f5ce-4c48-9fe8-bcf47d86bfe7"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{liaisonDto.distanceSature}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="21" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

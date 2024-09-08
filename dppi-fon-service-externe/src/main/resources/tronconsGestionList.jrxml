@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Liste des tronçons" pageWidth="1040" pageHeight="792" whenNoDataType="AllSectionsNoDetail" columnWidth="1040" leftMargin="0" rightMargin="0" topMargin="20" bottomMargin="20" uuid="7aedab9f-6817-4613-81a2-fed63ae0181f">
+	<property name="ireport.zoom" value="1.3310000000000004"/>
+	<property name="ireport.x" value="101"/>
+	<property name="ireport.y" value="0"/>
+	<field name="commune" class="java.lang.String"/>
+	<field name="codeTroncon" class="java.lang.String"/>
+	<field name="ch1N" class="java.lang.Double"/>
+	<field name="ch1W" class="java.lang.Double"/>
+	<field name="ch2N" class="java.lang.Double"/>
+	<field name="ch2W" class="java.lang.Double"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="21" splitType="Stretch">
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="0" y="1" width="230" height="20" forecolor="#000000" backcolor="#CCCCCC" uuid="c7ed738c-6cf3-4112-9a92-fbca2949c1f0"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.5" lineColor="#FFFFFF"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0" lineColor="#FFFFFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Commune]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="520" y="1" width="130" height="20" forecolor="#000000" backcolor="#CCCCCC" uuid="1e0ba09d-90e4-467b-ad70-03e37ef5d92d"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.5" lineColor="#FFFFFF"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0" lineColor="#FFFFFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CH1 Nord]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="650" y="1" width="130" height="20" forecolor="#000000" backcolor="#CCCCCC" uuid="f3690fb7-a084-4678-b365-93a907b62a0e"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.5" lineColor="#FFFFFF"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0" lineColor="#FFFFFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CH1 Ouest]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="780" y="1" width="130" height="20" forecolor="#000000" backcolor="#CCCCCC" uuid="49e12ea6-7409-4c7f-9165-eed90efcb7a8"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.5" lineColor="#FFFFFF"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0" lineColor="#FFFFFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CH2 Nord]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="910" y="1" width="130" height="20" forecolor="#000000" backcolor="#CCCCCC" uuid="43d304d2-f131-48b4-8f06-7cd3368fd816"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.5" lineColor="#FFFFFF"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0" lineColor="#FFFFFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CH2 Ouest]]></text>
+			</staticText>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" mode="Opaque" x="230" y="1" width="290" height="20" forecolor="#000000" backcolor="#CCCCCC" uuid="93f6c072-b048-4b27-9d7a-dbcc05a87915"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.5" lineColor="#FFFFFF"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0" lineColor="#FFFFFF"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tronçon]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Prevent"/>
+	</pageHeader>
+	<detail>
+		<band height="21" splitType="Prevent">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToBandHeight" x="0" y="1" width="230" height="20" uuid="65a99817-a608-444b-b9d5-c9bf7b99bfd2"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{commune}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToBandHeight" x="230" y="1" width="290" height="20" uuid="1197e53d-1dfb-48e3-bc3e-e6e9656e9537"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{codeTroncon}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToBandHeight" x="520" y="1" width="130" height="20" uuid="9b024a87-b355-4b3a-851b-109dcd666bc1"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{ch1N}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToBandHeight" x="650" y="1" width="130" height="20" uuid="a5408500-2c04-4ac2-b848-46f4c9666df9"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{ch1W}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToBandHeight" x="780" y="1" width="130" height="20" uuid="ef5a35a1-cc00-4904-a054-f7e7cc1be9dd"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{ch2N}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement stretchType="RelativeToBandHeight" x="910" y="1" width="130" height="20" uuid="44071852-1ba0-4f5d-b69c-3a4b3c187536"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{ch2W}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="21" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

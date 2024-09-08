@@ -1,0 +1,3 @@
+<jboss-web>
+    <context-root>/dppi-gc-externe</context-root>
+</jboss-web>

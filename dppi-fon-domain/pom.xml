@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<artifactId>dppi-fon-domain</artifactId>
+	<packaging>jar</packaging>
+	<name>dppi-fon-domain</name>
+	<description></description>
+
+	<parent>
+		<artifactId>dppi_fon_ms</artifactId>
+		<groupId>ma.iam</groupId>
+		<version>0.0.0-SNAPSHOT-1.0</version>
+	</parent>
+
+	<properties>
+		<endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<java.version>1.8</java.version>
+		<app.version>0.0.0-SNAPSHOT-1.0</app.version>
+	</properties>
+	
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>			
+			<exclusions>
+		    	<exclusion>
+		      		<groupId>org.springframework.boot</groupId>
+		      		<artifactId>spring-boot-starter-logging</artifactId>
+		   		</exclusion>
+		  	</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>8.0.32</version>
+			<scope>runtime</scope>
+		</dependency>
+	</dependencies>
+</project>
